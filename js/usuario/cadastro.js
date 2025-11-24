@@ -27,7 +27,13 @@ button.addEventListener("click", (e)=>{
     })
     .then(resp => resp.json())
     .then(dados =>{
-        res.innerHTML = dados.message   
+        res.innerHTML = dados.message  
+        
+        if(cadastrou === true){
+            setTimeout(()=>{
+                window.location.href = "./login.html"
+            }, 2000)
+        }
     })
     .catch(err =>{
         console.error("Erro ao cadastrar o usuario: ", err)
