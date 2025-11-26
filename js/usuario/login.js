@@ -24,6 +24,10 @@ button.addEventListener("click", (e)=>{
         sessionStorage.setItem("token", dados.token)
         sessionStorage.setItem("nome", dados.nome)
         sessionStorage.setItem("email", dados.email)
+
+        setTimeout(()=>{
+                window.location.href = "../../index.html"
+            }, 2000)
     })
     .catch(err =>{
         console.error("Erro ao efetuar o login do usuario: ", err)

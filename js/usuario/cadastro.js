@@ -29,7 +29,7 @@ button.addEventListener("click", (e)=>{
     .then(dados =>{
         res.innerHTML = dados.message  
         
-        if(cadastrou === true){
+        if(dados.cadastrou === true){
             setTimeout(()=>{
                 window.location.href = "./login.html"
             }, 2000)
