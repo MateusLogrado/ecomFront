@@ -6,24 +6,21 @@
 
 body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fff9ef; 
+    background-color: #fff9ef;
     color: #333;
-    
-    /* O SEGREDO ESTÁ AQUI: */
-    height: 100vh; /* A altura é exatos 100% da tela */
+    height: 100vh;
     width: 100vw;
-    overflow: hidden; /* Proíbe o body de rolar */
-    
+    overflow: hidden;
     display: flex;
     flex-direction: column;
 }
 
 header {
     background-color: #ff7f50;
-    padding: 10px 20px; /* Reduzi levemente */
+    padding: 10px 20px;
     color: white;
     text-align: center;
-    flex-shrink: 0; /* Header não encolhe */
+    flex-shrink: 0;
     z-index: 10;
 }
 
@@ -42,35 +39,30 @@ header nav a:hover {
 }
 
 main {
-    flex: 1; /* Ocupa todo o espaço disponível entre header e footer */
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Tenta centralizar verticalmente */
+    justify-content: center;
     padding: 10px;
-    
-    /* Se a tela for muito pequena, cria rolagem SÓ aqui dentro, 
-       sem empurrar o footer para fora */
-    overflow-y: auto; 
+    overflow-y: auto;
 }
 
 h1 {
     font-weight: 600;
-    font-size: 24px; /* Reduzi um pouco */
+    font-size: 24px;
     margin-bottom: 10px;
     text-align: center;
-    color: #ff7f50; 
+    color: #ff7f50;
 }
 
 #boxCadastrar {
     background-color: #ffffff;
     width: 100%;
-    max-width: 350px; /* Largura controlada */
-    padding: 20px 25px; /* Padding mais compacto */
+    max-width: 450px; /* Aumentei um pouco para caber melhor lado a lado */
+    padding: 20px 25px;
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-    border: none;
-    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -80,27 +72,48 @@ form {
     width: 100%;
     display: flex;
     flex-direction: column;
+    gap: 10px; /* Espaço automático entre os campos/linhas */
 }
 
+/* === NOVO CÓDIGO PARA OS GRUPOS E LINHAS === */
+
+/* Agrupa o Label e o Input verticalmente */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Ocupa todo o espaço disponível */
+}
+
+/* Cria uma linha para colocar itens lado a lado */
+.input-row {
+    display: flex;
+    gap: 15px; /* Espaço entre o input da esquerda e o da direita */
+    width: 100%;
+}
+
+/* === FIM DO NOVO CÓDIGO === */
+
 label {
-    font-size: 0.85rem; /* Letra um pouco menor */
+    font-size: 0.85rem;
     font-weight: bold;
     color: #555;
-    margin-bottom: 2px;
+    margin-bottom: 4px; /* Pequeno espaço entre label e input */
     text-align: left;
 }
 
+/* Estilo unificado para todos os inputs */
 input[type="text"],
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+input[type="tel"] {
     width: 100%;
-    padding: 8px 10px; /* Input mais fino */
-    margin-bottom: 10px; /* Menos espaço entre eles */
+    padding: 8px 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 0.95rem;
     outline: none;
     transition: border 0.3s;
+    /* Removi margin-bottom pois o GAP do form já resolve */
 }
 
 input:focus {
@@ -117,7 +130,7 @@ button {
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    margin-top: 5px;
+    margin-top: 15px; /* Espaço acima do botão */
     transition: background-color 0.3s;
 }
 
@@ -130,8 +143,7 @@ footer {
     color: white;
     padding: 8px;
     width: 100%;
-    flex-shrink: 0; /* Garante que o footer nunca suma */
-    position: relative; /* Garante que fique no fluxo do flex */
+    flex-shrink: 0;
 }
 
 footer small {
