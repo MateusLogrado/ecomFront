@@ -14,7 +14,7 @@ const valores = {
 fetch(`http://localhost:3000/usuario/consultar`,{
     method: "POST",
     headers: { "Content-type":"Application/json",
-        "Authorization": `Berear: ${token}`
+        "Authorization": `Bearer: ${token}`
      },
      body: JSON.stringify(valores)
 })

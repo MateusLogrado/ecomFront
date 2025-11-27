@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../js/endereco/cadastro.js" defer></script>
+    <script src="../../js/endereco/viaCep.js" defer></script>
+    <link rel="stylesheet" href="../../css/endereco.css"> 
+    <title>Cadastro</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="./endereco.html">Voltar</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Cadastre sua conta</h1>
+        <div id="boxCadastrar">
+            <form>
+                <div class="input-group">
+                    <label for="cep">Coloque o seu cep</label>
+                    <input type="text" id="cep">
+                </div>
+
+                <button id="viaCep">Buscar cep</button>
+
+                <div class="input-group">
+                    <label for="logradouro">Coloque seu logradouro</label>
+                    <input type="email" id="logradouro"> </div>
+
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="complemento">Pode adicionar um complemento</label>
+                        <input type="text" id="complemento"> </div>
+                    <div class="input-group">
+                        <label for="bairro">Seu bairro</label>
+                        <input type="tel" id="bairro">
+                    </div>
+                </div>
+
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="localidade">Sua localidade</label>
+                        <input type="text" id="localidade">
+                    </div>
+                    <div class="input-group">
+                        <label for="uf">Seu estado</label>
+                        <input type="text" id="uf">
+                    </div>
+                    <div class="input-group">
+                        <label for="numero">numero da sua casa</label>
+                        <input type="text" id="numero">
+                    </div>
+                </div>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="apelido">coloque um apelido pro endereço</label>
+                        <input type="text" id="apelido">
+                    </div>
+                    <div class="input-group">
+                        <label for="is_principal">É seu endereço principal?</label>
+                        <select id="is_principal">
+                            <option value="sim">Sim</option>
+                            <option value="não" selected>Não</option>
+                        </select>
+                    </div>
+                </div>
+
+            </form>
+            <button id="button">Cadastrar</button><br>
+            <div id="res"></div>
+        </div>
+    </main>
+    <footer>
+        <hr>
+        <small>feito por Mateus Queiroz</small>
+    </footer>
+</body>
+</html>

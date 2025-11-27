@@ -23,7 +23,7 @@ button.addEventListener("click", (e)=>{
     fetch(`http://localhost:3000/usuario`,{
         method: "PUT",
         headers: { "Content-type":"Application/json",
-            "Authorization": `Berear: ${token}`
+            "Authorization": `Bearer: ${token}`
          },
          body: JSON.stringify(valores)
     })

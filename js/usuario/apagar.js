@@ -17,7 +17,7 @@ button.addEventListener("click", (e)=>{
     fetch(`http://localhost:3000/usuario`, {
         method: "DELETE",
         headers: { "content-type":"application/json",
-            "Authorization": `Berear: ${token}`
+            "Authorization": `Bearer: ${token}`
          },
         body: JSON.stringify(valores)
     })

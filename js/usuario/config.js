@@ -7,7 +7,7 @@ atualizar.addEventListener("click", ()=>{
 })
 
 endereco.addEventListener("click", ()=>{
-    window.location.href = "../endereco/cadastrar.html"
+    window.location.href = "../endereco/endereco.html"
 })
 
 apagar.addEventListener("click", ()=>{
