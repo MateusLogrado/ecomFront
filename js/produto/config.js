@@ -8,7 +8,7 @@ cadastrar.addEventListener("click", ()=>{
 })
 
 atualizar.addEventListener("click", ()=>{
-    window.location.href = ".atualizar.html"
+    window.location.href = "./atualizar.html"
 })
 
 estoque.addEventListener("click", ()=>{

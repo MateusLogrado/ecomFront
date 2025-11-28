@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff9ef; /* Creme suave */
+    color: #333;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* === CABEÇALHO === */
+header {
+    background-color: #ff7f50; /* Laranja Coral */
+    padding: 10px 20px;
+    color: white;
+    text-align: center;
+    flex-shrink: 0;
+    z-index: 10;
+}
+
+header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+header nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* === ÁREA PRINCIPAL === */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    overflow-y: auto; /* Permite rolagem */
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ff7f50;
+}
+
+/* === GRID DE PRODUTOS === */
+#produtos {
+    display: grid;
+    /* Cards com largura min de 250px. Se couber mais, coloca lado a lado */
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); 
+    gap: 25px;
+    width: 100%;
+    max-width: 1100px;
+    padding-bottom: 20px;
+}
+
+/* === CARD DO PRODUTO === */
+.produto-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    /* O gap dá espaço automático entre imagem, titulo, desc, etc */
+    gap: 8px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 127, 80, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+    height: 100%; /* Garante que preencha a altura da linha do grid */
+}
+
+.produto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(255, 127, 80, 0.15);
+}
+
+/* Imagem */
+.produto-card img {
+    width: 100%;
+    height: 220px; /* Altura fixa para alinhar a grade */
+    object-fit: cover; /* Recorta a imagem sem esticar */
+    border-radius: 8px;
+    margin-bottom: 5px;
+}
+
+/* Título */
+.produto-card h3 {
+    font-size: 1.2rem;
+    color: #ff7f50; /* Título em destaque laranja */
+    text-align: center;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Informações (Descrição, Preço, Nível, Estoque) */
+.produto-card p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.4;
+    text-align: left; /* Melhor leitura para descrições */
+    margin: 0;
+}
+
+/* Destaque para o preço (opcional: se quiser o preço maior) */
+.produto-card p:nth-of-type(3) { 
+    /* O 3º parágrafo é o preço no seu HTML */
+    font-weight: bold;
+    color: #333;
+}
+
+/* === ÁREA DE AÇÕES (Input + Botão) === */
+.acoes {
+    display: flex;
+    gap: 10px;
+    margin-top: auto; /* Empurra os botões para o final do card sempre */
+    padding-top: 10px; /* Um respiro entre o texto e o botão */
+}
+
+/* Input de quantidade */
+.quant {
+    width: 60px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-weight: bold;
+    color: #333;
+}
+
+.quant:focus {
+    border-color: #ff7f50;
+    outline: none;
+}
+
+/* Botão Adicionar */
+.produto-card button {
+    flex: 1; /* Ocupa o resto do espaço */
+    padding: 10px;
+    background-color: #ff7f50;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.produto-card button:hover {
+    background-color: #e06030;
+}
+
+/* === RODAPÉ === */
+footer {
+    background-color: #ff7f50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+footer small {
+    font-size: 0.8rem;
+}
+
+button {
+    padding: 10px;
+    background-color: #ff7f50;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px; 
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e06030;
+}

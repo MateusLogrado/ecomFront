@@ -32,7 +32,7 @@ button.addEventListener("click", (e)=>{
         if(dados.cadastrou === true){
             setTimeout(()=>{
                 window.location.href = "./login.html"
-            }, 2000)
+            }, 1000)
         }
     })
     .catch(err =>{
