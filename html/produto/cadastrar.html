@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../js/produto/cadastro.js" defer></script>
+    <script src="../../js/admin.js" defer></script>
+    <script src="../../js/estoque.js" defer></script>
+    <link rel="stylesheet" href="../../css/style.css"> 
+    <title>Cadastro</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="./config.html">Voltar</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Cadastre um produto</h1>
+        <div id="boxCadastrar">
+            <form>
+                <div class="input-group">
+                    <label for="nome">Coloque o nome produto</label>
+                    <input type="text" id="nome">
+                </div>
+
+                <div class="input-group">
+                    <label for="descricao">Coloque a descrição do produto</label>
+                    <input type="email" id="descricao"> </div>
+
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="nivelPicancia">Coloque o nivel do cachorro quente</label>
+                        <input type="text" id="nivelPicancia"> </div>
+                    <div class="input-group">
+                        <label for="preco">O preço do cachorro quente</label>
+                        <input type="number" id="preco">
+                    </div>
+                </div>
+
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="imagem_url">Coloque o link da imagem</label>
+                        <input type="text" id="imagem_url">
+                    </div>
+                    <div class="input-group">
+                        <label for="ativo">Ele esta ativo?</label>
+                        <select id="ativo">
+                            <option value="true" selected>sim</option>
+                            <option value="false">não</option>
+                        </select>
+                    </div>
+                </div>
+                                <div class="input-row">
+                    <div class="input-group">
+                        <label for="quantidade_minima">Coloque a quantidade minima do produto</label>
+                        <input type="text" id="quantidade_minima">
+                    </div>
+
+            </form>
+            <button id="button">Cadastrar</button><br>
+            <div id="res"></div>
+        </div>
+    </main>
+    <footer>
+        <hr>
+        <small>feito por Mateus Queiroz</small>
+    </footer>
+</body>
+</html>

@@ -5,5 +5,5 @@ deslogar.addEventListener("click", (e)=>{
 
     sessionStorage.clear()
 
-    window.location.reload()
+    window.location.reload(forceReload)
 })
