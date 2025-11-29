@@ -7,22 +7,16 @@ button.addEventListener("click", (e)=>{
     const token = sessionStorage.getItem("token")
 
     let nomeA = document.getElementById("nome").value
-    let descricaoA = document.getElementById("descricao").value
-    let nivelPicanciaA = document.getElementById("nivelPicancia").value
-    let precoA = document.getElementById("preco").value
-    let imagem_urlA = document.getElementById("imagem_url").value
-    let ativoA = document.getElementById("ativo").value
+    let quantidade_atualA = document.getElementById("quantidade_atual").value
+    let quantidade_minimaA = document.getElementById("quantidade_minima").value
 
         const valores = {
         nome: nomeA,
-        descricao: descricaoA,
-        nivelPicancia: nivelPicanciaA,
-        preco: precoA,
-        imagem_url: imagem_urlA,
-        ativo: ativoA
+        quantidade_atual: quantidade_atualA,
+        quantidade_minima: quantidade_minimaA,
     }
 
-    fetch(`http://localhost:3000/produto`, {
+    fetch(`http://localhost:3000/estoque`, {
         method: "PUT",
         headers: { "content-type":"application/json",
             "Authorization": `Bearer: ${token}`

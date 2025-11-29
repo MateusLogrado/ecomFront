@@ -1,7 +1,8 @@
 const token = sessionStorage.getItem("token")
 const email = sessionStorage.getItem("email")
 
-const valores = {
+if(token){
+    const valores = {
     email: email
 }
 
@@ -23,3 +24,6 @@ fetch(`http://localhost:3000/usuario/consultar`,{
 .catch(err =>{
     console.error("Erro ao consultar o usuario: ", err)
 })
+}else{
+    window.location.href = "../../index.html"
+}

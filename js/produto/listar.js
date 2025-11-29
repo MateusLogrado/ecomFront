@@ -18,7 +18,8 @@ fetch(`http://localhost:3000/produto`, {
         produto.forEach(dad => {
             const estoques = estoque.find(estoque => estoque.idProduto === dad.codProduto)
 
-            produtos.innerHTML += `<div class="produto-card">
+            if(dad.ativo === !false){
+                            produtos.innerHTML += `<div class="produto-card">
     <img src="${dad.imagem_url}" alt="${dad.nome}">
     <h3>${dad.nome}</h3>
     <p>${dad.descricao}</p>
@@ -31,6 +32,7 @@ fetch(`http://localhost:3000/produto`, {
         <button class="adicionar" data-id="${dad.codProduto}" data-nome="${dad.nome}" data-preco="${dad.preco}">Adicionar</button>
     </div>
 </div>`
+            }
         })
     })
     .catch(err =>{

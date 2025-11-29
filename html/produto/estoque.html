@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../js/produto/atulizarestoque.js" defer></script>
+    <script src="../../js/produto/selectEstoque.js" defer></script>
+    <script src="../../js/admin.js" defer></script>
+    <link rel="stylesheet" href="../../css/style.css"> 
+    <title>Atualizar</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="./config.html">Voltar</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Atualizar um produto</h1>
+        <div id="boxCadastrar">
+            <form>
+                <div class="input-group">
+                    <label for="nome">Coloque o nome produto</label>
+                    <select id="nome">
+                        <option value="" selected disabled>-- Selecione uma opção --</option>
+                    </select>
+                </div>
+
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="quantidade_atual">Quantidade atual</label>
+                        <input type="text" id="quantidade_atual">
+                    </div>
+                    <div class="input-group">
+                        <label for="quantidade_minima">Quantidade minima</label>
+                        <input type="text" id="quantidade_minima">
+                    </div>
+                </div>
+            </form>
+            <button id="button">Atualizar</button><br>
+            <div id="res"></div>
+        </div>
+    </main>
+    <footer>
+        <hr>
+        <small>feito por Mateus Queiroz</small>
+    </footer>
+</body>
+</html>
