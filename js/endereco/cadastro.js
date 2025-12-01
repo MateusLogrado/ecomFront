@@ -31,7 +31,7 @@ button.addEventListener("click", (e)=>{
         email: email
     }
 
-    fetch(`http://localhost:3000/endereco `, {
+    fetch(`https://ecomback-production-f02d.up.railway.app/endereco `, {
         method: "POST",
         headers: { "content-type":"application/json",
             "Authorization": `Bearer: ${token}`

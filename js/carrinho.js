@@ -60,7 +60,7 @@ btnFinalizar.addEventListener('click', () => {
         return
     }
 
-    fetch('http://localhost:3000/produto', {
+    fetch('https://ecomback-production-f02d.up.railway.app/produto', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

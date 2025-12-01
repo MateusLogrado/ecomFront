@@ -16,7 +16,7 @@ button.addEventListener("click", (e)=>{
         quantidade_minima: quantidade_minimaA,
     }
 
-    fetch(`http://localhost:3000/estoque`, {
+    fetch(`https://ecomback-production-f02d.up.railway.app/estoque`, {
         method: "PUT",
         headers: { "content-type":"application/json",
             "Authorization": `Bearer: ${token}`

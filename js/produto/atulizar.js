@@ -22,7 +22,7 @@ button.addEventListener("click", (e)=>{
         ativo: ativoA
     }
 
-    fetch(`http://localhost:3000/produto`, {
+    fetch(`https://ecomback-production-f02d.up.railway.app/produto`, {
         method: "PUT",
         headers: { "content-type":"application/json",
             "Authorization": `Bearer: ${token}`

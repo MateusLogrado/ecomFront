@@ -1,6 +1,6 @@
 let nome = document.getElementById("nome")
 
-fetch(`http://localhost:3000/produto`)
+fetch(`https://ecomback-production-f02d.up.railway.app/produto`)
 .then(resp => resp.json())
 .then(dados =>{
     console.log(dados)
@@ -24,7 +24,7 @@ select.addEventListener("change", (e)=>{
     let imagem_url = document.getElementById("imagem_url")
     let ativo = document.getElementById("ativo")
 
-    fetch(`http://localhost:3000/produto`)
+    fetch(`https://ecomback-production-f02d.up.railway.app/produto`)
     .then(resp => resp.json())
     .then(dados =>{
     console.log(dados)

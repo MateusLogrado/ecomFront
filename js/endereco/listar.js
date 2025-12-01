@@ -8,7 +8,7 @@ let normais = document.getElementById("normais")
         email: email
     }
 
-    fetch(`http://localhost:3000/endereco/listar `, {
+    fetch(`https://ecomback-production-f02d.up.railway.app/endereco/listar `, {
         method: "POST",
         headers: { "content-type":"application/json",
             "Authorization": `Bearer: ${token}`
@@ -108,7 +108,7 @@ function ativarEventosApagar() {
             const id = elementoClicado.dataset.id
             const token = sessionStorage.getItem("token")
 
-            fetch(`http://localhost:3000/endereco/${id}`, {
+            fetch(`https://ecomback-production-f02d.up.railway.app/endereco/${id}`, {
                 method: "DELETE",
                 headers: { 
                     "Content-Type": "application/json",

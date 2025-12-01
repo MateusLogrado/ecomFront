@@ -23,7 +23,7 @@ button.addEventListener("click", (e)=>{
         ativo: ativo
     }
 
-        fetch(`http://localhost:3000/produto`, {
+        fetch(`https://ecomback-production-f02d.up.railway.app/produto`, {
         method: "POST",
         headers: { "content-type":"application/json",
             "Authorization": `Bearer: ${token}`
@@ -55,7 +55,7 @@ let quantidade_minima = Number(document.getElementById("quantidade_minima").valu
 
         console.log(valoresEstoque)
 
-        fetch(`http://localhost:3000/estoque`, {
+        fetch(`https://ecomback-production-f02d.up.railway.app/estoque`, {
         method: "POST",
         headers: { "content-type":"application/json",
             "Authorization": `Bearer ${token}`
