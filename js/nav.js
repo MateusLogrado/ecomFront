@@ -26,6 +26,7 @@ fetch(`http://localhost:3000/usuario/consultar`,{
     nav.innerHTML = `<a href="./html/usuario/cadastrar.html">Cadastrar</a> <a href="./html/usuario/login.html">Login</a>`
 }else{
     nav.innerHTML += `<a href="./html/usuario/config.html">Configuração</a>`
+    nav.innerHTML += `<a href="./carrinho.html">Carrinho</a>`
     nav.innerHTML += `<button id="deslogar">deslogar</button>`
 }
 
