@@ -20,7 +20,7 @@ button.addEventListener("click", (e)=>{
         identidade: identidade
     }
 
-    fetch(`https://ecomback-production-f02d.up.railway.app/usuario`,{
+    fetch(`http://localhost:3000/usuario`,{
         method: "PUT",
         headers: { "Content-type":"Application/json",
             "Authorization": `Bearer: ${token}`

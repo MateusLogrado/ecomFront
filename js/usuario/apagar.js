@@ -14,7 +14,7 @@ button.addEventListener("click", (e)=>{
         email: email
     }
 
-    fetch(`https://ecomback-production-f02d.up.railway.app/usuario`, {
+    fetch(`http://localhost:3000/usuario`, {
         method: "DELETE",
         headers: { "content-type":"application/json",
             "Authorization": `Bearer: ${token}`

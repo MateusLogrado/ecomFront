@@ -1,7 +1,6 @@
 const areaCarrinho = document.getElementById('area-carrinho')
 const totalTexto = document.getElementById('total')
 const btnLimpar = document.getElementById('limpar')    
-const btnFinalizar = document.getElementById('finalizar') 
 const btnVoltar = document.getElementById('voltar')    
 
 let produtos = JSON.parse(localStorage.getItem('produtos')) || []
@@ -29,8 +28,8 @@ function mostrarCarrinho() {
     `
 
     produtos.forEach(p => {
-        const precoNum = parseFloat(p.preco)
-        const qtdeNum = parseInt(p.qtde)
+        const precoNum = p.preco
+        const qtdeNum = p.qtde
         const subtotal = precoNum * qtdeNum
         
         total += subtotal
@@ -53,34 +52,6 @@ function mostrarCarrinho() {
     areaCarrinho.innerHTML = tabelaHTML
     totalTexto.textContent = `Total: R$ ${total.toFixed(2)}`
 }
-
-btnFinalizar.addEventListener('click', () => {
-    if (produtos.length === 0) {
-        alert('Seu carrinho está vazio!')
-        return
-    }
-
-    fetch('https://ecomback-production-f02d.up.railway.app/produto', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-            itens: produtos,
-            total: parseFloat(totalTexto.textContent.replace('Total: R$ ', ''))
-        })
-    })
-    .then(res => res.json())
-    .then(dados => {
-        console.log('Sucesso:', dados)
-        alert('Compra finalizada com sucesso!')
-        localStorage.removeItem('produtos')
-        produtos = []
-        mostrarCarrinho()
-    })
-    .catch(err => {
-        console.error('Erro:', err)
-        alert('Erro ao processar a compra. Tente novamente.')
-    })
-})
 
 btnLimpar.addEventListener('click', () => {
     areaCarrinho.innerHTML = '<p>Seu carrinho está vazio.</p>'

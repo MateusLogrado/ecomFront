@@ -24,13 +24,13 @@ select.addEventListener("change", (e)=>{
     let quantidade_atual = document.getElementById("quantidade_atual")
     let quantidade_minima = document.getElementById("quantidade_minima")
 
-    fetch(`https://ecomback-production-f02d.up.railway.app/produto`)
+    fetch(`http://localhost:3000/produto`)
     .then(resp => resp.json())
     .then(produtos =>{
 
         const produto = produtos.find(dad => dad.nome === select.value)
 
-            fetch(`https://ecomback-production-f02d.up.railway.app/estoque`)
+            fetch(`http://localhost:3000/estoque`)
     .then(resp => resp.json())
     .then(dados =>{
     console.log(dados)

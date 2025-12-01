@@ -1,6 +1,6 @@
 let produtos = document.getElementById("produtos")
 
-fetch(`https://ecomback-production-f02d.up.railway.app/produto`, {
+fetch(`http://localhost:3000/produto`, {
     method: "GET",
     headers: { "content-type":"application/json",
         "Authorization": `Bearer: ${token}`
@@ -8,7 +8,7 @@ fetch(`https://ecomback-production-f02d.up.railway.app/produto`, {
     })
 .then(resp => resp.json())
 .then(produto =>{
-    fetch(`https://ecomback-production-f02d.up.railway.app/estoque`)
+    fetch(`http://localhost:3000/estoque`)
     .then(resp => resp.json())
     .then(estoque =>{
 

@@ -8,7 +8,7 @@ let normais = document.getElementById("normais")
         email: email
     }
 
-    fetch(`https://ecomback-production-f02d.up.railway.app/endereco/listar `, {
+    fetch(`http://localhost:3000/endereco/listar `, {
         method: "POST",
         headers: { "content-type":"application/json",
             "Authorization": `Bearer: ${token}`

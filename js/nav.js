@@ -7,7 +7,7 @@ const valores = {
     email: emailSession
 }
 
-fetch(`https://ecomback-production-f02d.up.railway.app/usuario/consultar`,{
+fetch(`http://localhost:3000/usuario/consultar`,{
     method: "POST",
     headers: { "Content-type":"Application/json",
         "Authorization": `Bearer: ${token}`

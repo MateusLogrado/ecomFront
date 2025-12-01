@@ -1,21 +1,27 @@
-let nome = document.getElementById("nome")
+let enderecos = document.getElementById("enderecos")
+const email = sessionStorage.getItem("email")
+const tokenSelect = sessionStorage.getItem("token")
 
-fetch(`https://ecomback-production-f02d.up.railway.app/produto`)
+const valores = {
+    email: email
+}
+
+fetch(`http://localhost:3000/usuario/consultar`,{
+    method: "POST",
+    headers: { "Content-type":"Application/json",
+        "Authorization": `Bearer: ${tokenSelect}`
+     },
+     body: JSON.stringify(valores)
+})
 .then(resp => resp.json())
 .then(dados =>{
     console.log(dados)
-
-    dados.forEach(dad => {
-        const quente = new Option(dad.nome, dad.nome)
-
-        nome.add(quente)
-    })
 })
 
 
 let select = document.getElementById("nome")
 
-select.addEventListener("change", (e)=>{
+enderecos.addEventListener("change", (e)=>{
     e.preventDefault()
 
     let descricao = document.getElementById("descricao")
