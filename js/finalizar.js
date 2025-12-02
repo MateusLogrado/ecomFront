@@ -1,5 +1,6 @@
 const finalizar = document.getElementById("finalizar")
 const token = sessionStorage.getItem("token")
+let res = document.getElementById("res")
 
 finalizar.addEventListener("click", (e) => {
     e.preventDefault();
@@ -25,7 +26,7 @@ finalizar.addEventListener("click", (e) => {
                     console.error(`Produto ID ${produtoNoCarrinho.codProd} não encontrado no estoque!`)
                     compraValida = false;
                 } else if (qtdeCarrinho > itemEstoque.quantidade_atual) {
-                    console.log(`A quantidade que deseja comprar de ${produtoNoCarrinho.nome} está indisponível no estoque (Disponível: ${itemEstoque.quantidade_atual})`)
+                    alert(`A quantidade que deseja comprar de ${produtoNoCarrinho.nome} está indisponível no estoque (Disponível: ${itemEstoque.quantidade_atual})`)
                     compraValida = false;
                 }
 
@@ -108,7 +109,9 @@ function finalizarCompra(valorSubtotal) {
             })
             .then(resp => resp.json())
             .then(itemPedido => {
-                
+                res.innerHTML = itemPedido.message
+
+                localStorage.clear()
             })
             .catch(err => {
                 console.error("Erro ao fazer o item pedido: ", err)

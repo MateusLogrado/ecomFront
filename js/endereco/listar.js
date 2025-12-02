@@ -108,7 +108,7 @@ function ativarEventosApagar() {
             const id = elementoClicado.dataset.id
             const token = sessionStorage.getItem("token")
 
-            fetch(`https://ecomback-production-f02d.up.railway.app/endereco/${id}`, {
+            fetch(`http://localhost:3000/endereco/${id}`, {
                 method: "DELETE",
                 headers: { 
                     "Content-Type": "application/json",

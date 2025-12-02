@@ -20,13 +20,17 @@ fetch(`http://localhost:3000/usuario/consultar`,{
 
     if(dados.tipo_usuario === "ADMIN"){
         nav.innerHTML += `<a href="./html/produto/config.html">Produto</a>`
+        nav.innerHTML += `<a href="./html/usuario/config.html">Configuração</a>`
+            nav.innerHTML += `<a href="./pedidosAdmin.html">Pedidos</a>`
+        nav.innerHTML += `<button id="deslogar">deslogar</button>`
     }
 
     if(!token){
     nav.innerHTML = `<a href="./html/usuario/cadastrar.html">Cadastrar</a> <a href="./html/usuario/login.html">Login</a>`
-}else{
+}else if(dados.tipo_usuario === "CLIENTE"){
     nav.innerHTML += `<a href="./html/usuario/config.html">Configuração</a>`
     nav.innerHTML += `<a href="./carrinho.html">Carrinho</a>`
+    nav.innerHTML += `<a href="./pedidos.html">Pedidos</a>`
     nav.innerHTML += `<button id="deslogar">deslogar</button>`
 }
 

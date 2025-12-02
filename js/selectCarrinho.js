@@ -23,7 +23,7 @@ headers: { "Content-type":"Application/json",
         }else if(ende.is_principal === false){
             enderecoSelect.innerHTML += `<option value="${ende.codEndereco}">${ende.apelido}</option>`
         }
-    });
+    })
     
 })
 .catch(err =>{
