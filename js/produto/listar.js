@@ -27,7 +27,7 @@ fetch(`http://localhost:3000/produto`, {
     <p>preço: ${dad.preco}</p>
     <p>quantidade disponivel: ${estoques.quantidade_atual}</p>
     <div class="acoes">
-        <input type="number" value="1" min="1" class="quant">
+        <input type="number" min="0" max="${estoques.quantidade_atual}" class="quant">
         
         <button class="adicionar" data-id="${dad.codProduto}" data-nome="${dad.nome}" data-preco="${dad.preco}">Adicionar</button>
     </div>

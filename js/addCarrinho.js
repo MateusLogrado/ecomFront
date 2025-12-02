@@ -18,7 +18,6 @@ function adicionarProduto(botao, input) {
     } else {
         produtosCarrinho.push({ nome, preco, codProd, qtde })
     }
-    // -------------------------------------------------
 
     console.log(produtosCarrinho)
     localStorage.setItem('produtos', JSON.stringify(produtosCarrinho))
