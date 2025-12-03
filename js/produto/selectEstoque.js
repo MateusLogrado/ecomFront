@@ -1,6 +1,6 @@
 let nome = document.getElementById("nome")
 
-fetch(`https://ecomback-production-f02d.up.railway.app/produto`)
+fetch(`http://localhost:3000/produto`)
 .then(resp => resp.json())
 .then(dados =>{
     console.log(dados)
