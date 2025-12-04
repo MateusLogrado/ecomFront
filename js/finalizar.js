@@ -112,6 +112,7 @@ function finalizarCompra(valorSubtotal) {
                 res.innerHTML = itemPedido.message
 
                 localStorage.clear()
+                window.location.reload()
             })
             .catch(err => {
                 console.error("Erro ao fazer o item pedido: ", err)
